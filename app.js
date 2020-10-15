@@ -13,6 +13,9 @@ app.get('/', (req, res) => {
     res.send(`${menu} Yeah! NodeJs is working, now try MongoDB`)
 })
 
+// 👉👉 "client.connect()" function is called inside each method since we only want to test that the server is working correctly.
+// 👉👉 If you want to make a CRUD look at the last lines that are commented
+
 app.get("/testDb", (req, res) => {
     const iam = 'I am on Test Database'
     _log = ''
@@ -96,3 +99,31 @@ function myLog(msg){
 app.listen(process.env.PORT || 3000, () => {
     console.log('listening on 3000')
 })
+
+// ###############################################
+// 👇 👇  This is one way to do a simple CRUD 👇 👇
+// ###############################################
+// These lines are commented because we do not want
+// it to be executed automatically when loading the
+// page in order to test the previous methods
+
+// MongoClient.connect(dbPath, { useUnifiedTopology: true })
+//     .then(client => {
+//         const db = client.db(dbInfo.dataBase)
+//         app.get('/wyd', (req, res) => {
+//             // do something with the database - use the db variable
+//             res.send(`${menu} CRUD - GET (List) was called`)
+//         })
+//         app.post('/wyd', (req, res) => {
+//             // do something with the database - use the db variable
+//             res.send(`${menu} CRUD - POST (Save) was called`)
+//         })
+//         app.put('/wyd', (req, res) => {
+//             // do something with the database - use the db variable
+//             res.send(`${menu} CRUD - PUT (Edit) was called`)
+//         })
+//         app.delete('/wyd', (req, res) => {
+//             // do something with the database - use the db variable
+//             res.send(`${menu} CRUD - DELETE (Delete) was called`)
+//         })
+// }).catch(console.error)
