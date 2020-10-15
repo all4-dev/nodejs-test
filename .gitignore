@@ -1,0 +1,13 @@
+# Mac generated files
+.DS_Store
+
+# Generated files
+node_modules/
+
+# Intellij
+.idea/
+
+# Secret files
+.env
+
+package-lock.json
