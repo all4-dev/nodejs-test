@@ -2,7 +2,7 @@ const express = require('express')
 const MongoClient = require('mongodb').MongoClient
 const app = express()
 
-const dbInfo = { host: `127.0.0.1`, port: `27017`, dataBase: `tested` }
+const dbInfo = { host: `127.0.0.1`, port: `27017`, dataBase: `nodejs_test` }
 const dbPath = `mongodb://${dbInfo.host}:${dbInfo.port}/${dbInfo.dataBase}`
 const client = new MongoClient(dbPath)
 
