@@ -18,9 +18,6 @@
   "homepage": "https://github.com/all4-dev/nodejs-test#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "forever": "^3.0.2"
-  },
-  "devDependencies": {
     "mongodb": "^3.6.2"
   }
 }
