@@ -11,36 +11,24 @@ $ ssh -i "your-key-name.pem" your-public-dns.compute.amazonaws.com
 ```
 
 ___
-## _Install nvm and NodeJs_
+## _Install NodeJs_
 
 Update sever package list
 ```sh
 $ sudo yum update -y
 ```
 
-Download and install nvm (node version manager)\
-Check latest version here 👇 \
-https://github.com/nvm-sh/nvm
+Download and install
 ```sh
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.36.0/install.sh | bash
+$ sudo yum install -y gcc-c++ make
+$ curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash -
+$ sudo yum install -y nodejs
 ```
 
-Activate nvm by typing the following at the command line.
+_Check Version._
 ```sh
-$ . ~/.nvm/nvm.sh
-```
-
-Execute command `$ nvm install`, 
-the help will be shown because a parameter is missing, 
-however when executing the command we will be able to 
-see the latest version available
-```sh
-$ nvm install 8.0.0
-```
-
-_Test is Node.js is installed and running correctly by typing the following at the command line._
-```sh
-$ node -e "console.log('Running Node.js ' + process.version)"
+$ node -v 
+$ npm -v
 ```
 
 ___
